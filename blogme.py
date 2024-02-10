@@ -18,7 +18,6 @@ tdata.describe()
 tdata.info()
 
 #accounting the number of article per source
-#format of groupby: df.(['column to group'])[column to count].count()
 tdata.groupby(['source_id'])['article_id'].count()
 
 #number of reactions per publisher
@@ -27,27 +26,6 @@ tdata.groupby(['source_id'])['engagement_reaction_count'].sum()
 #dropping a column
 tdata=tdata.drop('engagement_comment_plugin_count', axis=1)
 
-# Functions in python
-def thisFunction():
-    print ('This is my first function')
-    
-thisFunction()
-
-#This is a function with variables
-def aboutMe(name, surname, location):
-    print('This is '+ name+' My surname is '+surname+ ' I am from '+location)
-    return name, surname, location
-
-a = aboutMe('Dee', 'Naidoo', 'South Africa')
-
-#Using for loops in function
-def favfood(food):
-    for x in food:
-        print ('Top food is '+x)
-        
-fastfood = ['Salad', 'Water', 'Fruit']
-
-favfood(fastfood)
 
 #Creating a keyword flag
 
